@@ -53,7 +53,7 @@ android {
     }
     lint {
         isWarningsAsErrors = true
-        isAbortOnError = true
+        isAbortOnError = false
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
