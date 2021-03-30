@@ -19,7 +19,6 @@ dependencies {
     implementation("androidx.compose.material:material:${Versions.compose}")
     implementation("androidx.compose.material:material-icons-extended:${Versions.compose}")
     implementation("androidx.navigation:navigation-compose:${Versions.navigation_compose}")
-
 }
 
 android {
