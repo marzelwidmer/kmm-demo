@@ -10,11 +10,9 @@ object Versions {
     const val appcompat = "1.3.0-rc01"
 
 
-
     const val kotlin = "1.4.31"
+    const val ktor = "1.5.2"
     const val kotlinx_serialization_json = "1.1.0"
     const val kotlinx_coroutines_core = "1.4.3-native-mt"
-    const val ktor = "1.5.2"
-
-    const val russhwolf = "0.7.4"
+    const val russhwolf_no_arg = "0.7.4"
 }

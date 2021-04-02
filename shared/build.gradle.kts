@@ -42,20 +42,19 @@ kotlin {
                 implementation("io.ktor:ktor-client-json:${Versions.ktor}")
                 implementation("io.ktor:ktor-client-logging:${Versions.ktor}")
                 implementation("io.ktor:ktor-client-serialization:${Versions.ktor}")
-                implementation("com.russhwolf:multiplatform-settings-no-arg:${Versions.russhwolf}")
+                implementation("com.russhwolf:multiplatform-settings-no-arg:${Versions.russhwolf_no_arg}")
             }
         }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
-                implementation("com.russhwolf:multiplatform-settings-test:${Versions.russhwolf}")
+                implementation("com.russhwolf:multiplatform-settings-test:${Versions.russhwolf_no_arg}")
             }
         }
         val androidMain by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-android:${Versions.ktor}")
-                implementation("com.google.android.material:material:1.3.0")
             }
         }
         val androidTest by getting {
