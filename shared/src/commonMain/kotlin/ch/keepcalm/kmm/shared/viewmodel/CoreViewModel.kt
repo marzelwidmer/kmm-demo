@@ -1,6 +1,9 @@
 package ch.keepcalm.kmm.shared.viewmodel
 
 import kotlinx.coroutines.flow.StateFlow
+import ch.keepcalm.kmm.shared.DebugLogger
+
+val debugLogger by lazy { DebugLogger("KMM-DEMO") }
 
 class CoreViewModel {
 
