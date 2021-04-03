@@ -13,6 +13,7 @@ object Versions {
 
     const val kotlin = "1.4.31"
     const val kotlinx_serialization_json = "1.1.0"
+    const val kotlinx_datetime = "0.1.1"
     const val kotlinx_coroutines_core = "1.4.3-native-mt"
     const val ktor = "1.5.2"
 
