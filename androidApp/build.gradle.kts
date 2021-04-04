@@ -1,24 +1,34 @@
+import org.jetbrains.kotlin.gradle.plugin.PLUGIN_CLASSPATH_CONFIGURATION_NAME
+
 plugins {
     id("com.android.application")
     kotlin("android")
 }
 
 dependencies {
-    implementation(project(":shared"))
-    implementation("com.google.android.material:material:1.3.0")
-    implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
+    add(PLUGIN_CLASSPATH_CONFIGURATION_NAME, "androidx.compose.compiler:compiler:${Versions.compose}")
 
-
-    implementation("androidx.activity:activity-compose:${Versions.activity_compose}")
+    implementation("androidx.compose.runtime:runtime:${Versions.compose}")
+    implementation("com.google.android.material:material:${Versions.material}")
     implementation("androidx.appcompat:appcompat:${Versions.appcompat}")
-    implementation("androidx.compose.ui:ui:${Versions.compose}")
-    implementation("androidx.compose.ui:ui-graphics:${Versions.compose}")
-    implementation("androidx.compose.ui:ui-tooling:${Versions.compose}")
-    implementation("androidx.compose.foundation:foundation-layout:${Versions.compose}")
-    implementation("androidx.compose.material:material:${Versions.compose}")
-    implementation("androidx.compose.material:material-icons-extended:${Versions.compose}")
-    implementation("androidx.navigation:navigation-compose:${Versions.navigation_compose}")
+
+    implementation(Lifecycle.extensions)
+    implementation(Lifecycle.viewmodel)
+    implementation(Lifecycle.livedata)
+
+    implementation(Compose.ui)
+    implementation(Compose.uiGraphics)
+    implementation(Compose.uiTooling)
+    implementation(Compose.foundation)
+    implementation(Compose.foundationLayout)
+    implementation(Compose.material)
+    implementation(Compose.runtimeLiveData)
+    implementation(Compose.navigation)
+    implementation(Compose.accompanist)
+
+    implementation(Koin.android)
+
+    implementation(project(":shared"))
 }
 
 android {
@@ -26,7 +36,7 @@ android {
     buildToolsVersion(Versions.build_tools)
 
     defaultConfig {
-        applicationId = "ch.keepcalm.kmm"
+        applicationId = "ch.keepcalm.kmm.c9s"
         minSdkVersion(Versions.min_sdk)
         targetSdkVersion(Versions.target_sdk)
         versionCode = 1
@@ -60,6 +70,8 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+        useIR = true
+        suppressWarnings = true
     }
     buildFeatures {
         compose = true
@@ -68,6 +80,7 @@ android {
         kotlinCompilerExtensionVersion = Versions.compose
     }
 }
+
 
 kotlin.sourceSets.all {
     languageSettings.apply {
@@ -79,6 +92,7 @@ kotlin.sourceSets.all {
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
-        freeCompilerArgs = listOf("-Xskip-prerelease-check", "-Xskip-metadata-version-check")
+        freeCompilerArgs = listOf("-Xallow-jvm-ir-dependencies", "-Xskip-prerelease-check", "-Xskip-metadata-version-check",
+            "-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi")
     }
 }

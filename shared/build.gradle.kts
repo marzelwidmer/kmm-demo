@@ -18,6 +18,7 @@ android {
         create("testReleaseApi")
     }
 }
+
 kotlin {
     android()
     ios {
@@ -27,6 +28,7 @@ kotlin {
             }
         }
     }
+
     sourceSets {
         all {
             languageSettings.apply {
@@ -36,12 +38,29 @@ kotlin {
         }
         val commonMain by getting {
             dependencies {
+                // Coroutines
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinx_coroutines_core}")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinx_serialization_json}")
-                implementation("io.ktor:ktor-client-core:${Versions.ktor}")
-                implementation("io.ktor:ktor-client-json:${Versions.ktor}")
-                implementation("io.ktor:ktor-client-logging:${Versions.ktor}")
-                implementation("io.ktor:ktor-client-serialization:${Versions.ktor}")
+
+                // Kotlinx Date/Time
+                api(Deps.kotlinxDateTime)
+
+                // kermit
+                api(Deps.kermit)
+
+                // koin
+                api(Koin.core)
+                compileOnly(Koin.test)
+
+                // Ktor
+                implementation(Ktor.clientCore)
+                implementation(Ktor.clientJson)
+                implementation(Ktor.clientLogging)
+                implementation(Ktor.clientSerialization)
+
+                // Kotlinx Serialization
+                implementation(Serialization.core)
+                implementation(Serialization.json)
+
                 implementation("com.russhwolf:multiplatform-settings-no-arg:${Versions.russhwolf}")
             }
         }
@@ -55,21 +74,24 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-android:${Versions.ktor}")
-                implementation("com.google.android.material:material:1.3.0")
             }
         }
         val androidTest by getting {
             dependencies {
                 implementation(kotlin("test-junit"))
-                implementation("junit:junit:4.13.2")
+                implementation("junit:junit:4.12")
             }
         }
         val iosMain by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-ios:${Versions.ktor}")
+                implementation(Ktor.clientIos)
             }
         }
-        val iosTest by getting
+        val iosTest by getting {
+
+        }
+
     }
 }
 
