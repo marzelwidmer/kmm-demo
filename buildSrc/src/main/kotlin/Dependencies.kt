@@ -5,6 +5,15 @@ object Versions {
     const val min_sdk = 23
     const val target_sdk = 30
 
+    const val kotlin = "1.4.31"
+    const val kotlinx_serialization = "1.1.0"
+//    const val kotlinx_serialization = "1.0.0"
+
+    const val kotlinx_coroutines_core = "1.4.3-native-mt"
+    const val kotlinx_dateTime = "0.1.1"
+    const val ktor = "1.5.2"
+
+
     const val compose = "1.0.0-beta03"
     const val nav_compose = "1.0.0-alpha09"
     const val accompanist = "0.6.2"
@@ -19,13 +28,6 @@ object Versions {
     const val slf4j = "1.7.30"
     const val russhwolf = "0.7.4"
 
-    const val kotlin = "1.4.32"
-    const val kotlinx_serialization = "1.1.0"
-//    const val kotlinx_serialization = "1.0.0"
-
-    const val kotlinx_coroutines_core = "1.4.3-native-mt"
-    const val kotlinx_dateTime = "0.1.1"
-    const val ktor = "1.5.2"
 
 
 }
