@@ -1,5 +1,5 @@
 object Versions {
-    const val gradle = "7.0.0-alpha12"
+    const val gradle = "7.0.0-alpha13"
     const val compile_sdk = 30
     const val build_tools = "30.0.2"
     const val min_sdk = 23
@@ -7,7 +7,6 @@ object Versions {
 
     const val kotlin = "1.4.31"
     const val kotlinx_serialization = "1.1.0"
-//    const val kotlinx_serialization = "1.0.0"
 
     const val kotlinx_coroutines_core = "1.4.3-native-mt"
     const val kotlinx_dateTime = "0.1.1"
@@ -27,9 +26,6 @@ object Versions {
     const val koin = "3.0.1-beta-2"
     const val slf4j = "1.7.30"
     const val russhwolf = "0.7.4"
-
-
-
 }
 
 object Deps {
