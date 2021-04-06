@@ -8,7 +8,7 @@ pluginManagement {
     }
     
 }
-rootProject.name = "kmm-demo"
+rootProject.name = "iosApp"
 
 include(":androidApp")
 include(":shared")
