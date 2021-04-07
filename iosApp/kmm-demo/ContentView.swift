@@ -9,15 +9,42 @@ import SwiftUI
 import shared
 
 struct ContentView: View {
+    
+    @StateObject var viewModel = FooViewModel(repository: CovidRepository())
+
     var body: some View {
- 
-        Text(Greeting().greeting())
-            .padding()
+        FooListView(viewModel: viewModel)
+//                TabView {
+//                    Text(Greeting().greeting() + " dddd" )
+//                        .padding()
+//                }
+       
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
+
+
+//
+//struct ContentView: View {
+//    @StateObject var viewModel = FooViewModel(repository: CovidRepository())
+//
+//    var body: some View {
+//        TabView {
+//            PlayerListView(viewModel: viewModel)
+//                .tabItem {
+//                    Label("Players", systemImage: "person")
+//                }
+//            FixtureListView(viewModel: viewModel)
+//                .tabItem {
+//                    Label("Fixtues", systemImage: "clock")
+//                }
+//        }
+//    }
+//}
+//
+//

@@ -13,6 +13,8 @@
 		E3D1D469261CF18000BAA797 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D1D468261CF18000BAA797 /* Preview Assets.xcassets */; };
 		E3D1D474261CF25F00BAA797 /* shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D1D473261CF25F00BAA797 /* shared.framework */; };
 		E3D1D475261CF25F00BAA797 /* shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E3D1D473261CF25F00BAA797 /* shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E3D1D47A261CF8A500BAA797 /* Foo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D1D479261CF8A500BAA797 /* Foo.swift */; };
+		E3D1D47C261CFD1900BAA797 /* FooListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D1D47B261CFD1900BAA797 /* FooListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +39,8 @@
 		E3D1D468261CF18000BAA797 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E3D1D46A261CF18000BAA797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3D1D473261CF25F00BAA797 /* shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = shared.framework; path = "../shared/build/xcode-frameworks/shared.framework"; sourceTree = "<group>"; };
+		E3D1D479261CF8A500BAA797 /* Foo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foo.swift; sourceTree = "<group>"; };
+		E3D1D47B261CFD1900BAA797 /* FooListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				E3D1D461261CF18000BAA797 /* kmm_demoApp.swift */,
 				E3D1D463261CF18000BAA797 /* ContentView.swift */,
+				E3D1D479261CF8A500BAA797 /* Foo.swift */,
+				E3D1D47B261CFD1900BAA797 /* FooListView.swift */,
 				E3D1D465261CF18000BAA797 /* Assets.xcassets */,
 				E3D1D46A261CF18000BAA797 /* Info.plist */,
 				E3D1D467261CF18000BAA797 /* Preview Content */,
@@ -188,7 +194,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3D1D464261CF18000BAA797 /* ContentView.swift in Sources */,
+				E3D1D47A261CF8A500BAA797 /* Foo.swift in Sources */,
 				E3D1D462261CF18000BAA797 /* kmm_demoApp.swift in Sources */,
+				E3D1D47C261CFD1900BAA797 /* FooListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

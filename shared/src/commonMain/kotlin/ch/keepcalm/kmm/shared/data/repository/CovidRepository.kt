@@ -1,6 +1,6 @@
 package ch.keepcalm.kmm.shared.data.repository
 
-import ch.keepcalm.kmm.shared.remote.CovidApi
+import ch.keepcalm.kmm.shared.data.remote.CovidApi
 import ch.keepcalm.kmm.shared.domain.entities.Country
 import ch.keepcalm.kmm.shared.domain.entities.Covid
 import ch.keepcalm.kmm.shared.getLogger

@@ -1,7 +1,6 @@
-package ch.keepcalm.kmm.shared.remote.model
+package ch.keepcalm.kmm.shared.data.remote.model
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import kotlinx.serialization.*
 
 @Serializable
 data class CovidDto(

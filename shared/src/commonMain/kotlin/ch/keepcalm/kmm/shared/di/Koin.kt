@@ -1,8 +1,8 @@
 package ch.keepcalm.kmm.shared.di
 
+import ch.keepcalm.kmm.shared.data.remote.CovidApi
 import ch.keepcalm.kmm.shared.data.repository.CovidRepository
 import ch.keepcalm.kmm.shared.getLogger
-import ch.keepcalm.kmm.shared.remote.CovidApi
 import co.touchlab.kermit.Kermit
 import io.ktor.client.*
 import io.ktor.client.features.json.*

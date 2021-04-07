@@ -1,6 +1,6 @@
-package ch.keepcalm.kmm.shared.remote
+package ch.keepcalm.kmm.shared.data.remote
 
-import ch.keepcalm.kmm.shared.remote.model.CovidDto
+import ch.keepcalm.kmm.shared.data.remote.model.CovidDto
 import io.ktor.client.*
 import io.ktor.client.request.*
 import org.koin.core.component.KoinComponent
